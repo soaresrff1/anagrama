@@ -7,7 +7,12 @@ process.stdin.on("data", function (data) {
     palavra = palavra.split("");
   }
   console.log(palavra);
+  for (let i = 0; i < palavra.length; i++) {
+    for (let j = 0; j < palavra.length; j++) {
+      let aux = palavra[i];
+      palavra[i] = palavra[j];
+      palavra[j] = aux;
+      console.log(palavra.join(""));
+    }
+  }
 });
-for (let i = 0; i < palavra.length; i++) {
-  for (let j = i + 1; j < palavra.length; j++) {}
-}
